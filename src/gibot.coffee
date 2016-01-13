@@ -15,7 +15,7 @@
 #   ShingoIchikawa <ichikawa.shingo.0829@gmail.com>
 
 module.exports = (robot) ->
-  robot.router.get "/merge-request", (req, res) ->
+  robot.router.post "/merge-request", (req, res) ->
     console.log(req)
     res.end()
 
