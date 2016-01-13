@@ -17,6 +17,9 @@
 module.exports = (robot) ->
   robot.router.post "/merge-request", (req, res) ->
     json = req.body
+    if not json
+      res.writeHead 200, 'Content-Type':'text/plain'
+      res.end 'Hello World!\n'
     console.log(json)
     res.end()
 
